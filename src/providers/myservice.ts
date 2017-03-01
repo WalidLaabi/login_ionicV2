@@ -14,5 +14,9 @@ export class Myservice {
   constructor(public http: Http) {
     console.log('Hello Myservice Provider');
   }
+  getuser()
+  {
+    console.log(this.http.get("http://ionicpfa.000webhostapp.com/users.php"));
+  }
 
 }

@@ -3,7 +3,7 @@
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Page One</ion-title>
+        <ion-title>Acceuil</ion-title>
         <ion-buttons end>
             <button ion-button icon-left (click)="Logout()">
        <ion-icon name="contact"></ion-icon>Log Out
@@ -13,11 +13,7 @@
 </ion-header>
 
 <ion-content padding>
-    <h3>Ionic Menu Starter</h3>
-
-    <p>
-        If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-    </p>
 
     <button ion-button secondary menuToggle>Toggle Menu</button>
+    <button ion-button block (click)="load()">Loading</button>
 </ion-content>

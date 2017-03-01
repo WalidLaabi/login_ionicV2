@@ -32,15 +32,16 @@ export class LoginPage {
         let loader = this.loading.create(
           {
             content : "Authentification....",
-            duration :5000
+            duration :2000
 
           }
         );
-        loader.present();
-        this.navCtrl.setRoot(Page1);
-        this.localStorage = data;
-        /*this.fetchdata = data;
-         console.log(this.fetchdata);*/
+        loader.present().then(() => 
+          {
+            this.fetchdata = data;
+            this.navCtrl.push(Page1,this.fetchdata);
+          }
+        );
       },error=>{
         let alert = this.alert.create(
           {
